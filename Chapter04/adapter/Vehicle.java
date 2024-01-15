@@ -13,15 +13,14 @@ class Vehicle {
     public void refuel(){
         System.out.println("Vehicle, stop");
         switch (engine){
-            case ElectricEngine de -> {
+            case ElectricEngine ee -> {
                 System.out.println("Vehicle needs recharge");
-                de.checkPlug();
-                de.tank();
+                ee.checkPlug();
+                ee.tank();
             }
             case PetrolEngine pe -> {
                 System.out.println("Vehicle needs petrol");
                 pe.tank();
-
             }
             default -> throw new IllegalStateException("Vehicle has no engine");
         }
